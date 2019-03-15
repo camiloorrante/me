@@ -15,6 +15,7 @@ pipeline {
     stage('Test') {
       steps {
         sh 'npm test'
+        mail(subject: 'chuy se la come', body: 'toda', to: 'jesus.caballero@neoris.com')
       }
     }
   }
