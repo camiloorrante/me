@@ -25,7 +25,7 @@ pipeline {
     }
     stage('Approved') {
       steps {
-        mail(to: 'camilo', subject: 'ya se aprovo ', body: 'kiubo')
+        mail(to: 'camilo.orrante@gmail.com', subject: 'ya se aprovo ', body: 'kiubo')
       }
     }
   }
