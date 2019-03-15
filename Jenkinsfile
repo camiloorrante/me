@@ -18,5 +18,15 @@ pipeline {
         mail(subject: 'chuy se la come', body: 'toda', to: 'jesus.caballero@neoris.com')
       }
     }
+    stage('Approve') {
+      steps {
+        input(message: 'Aprobar?', submitter: 'camilo')
+      }
+    }
+    stage('Approved') {
+      steps {
+        mail(to: 'camilo', subject: 'ya se aprovo ', body: 'kiubo')
+      }
+    }
   }
 }
